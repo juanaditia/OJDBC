@@ -40,7 +40,7 @@ public class CountryController implements ICountryController {
                 System.out.println("Error!!");
                 System.out.println("Inputan kosong");
             } //Id tidak ada
-            else if (icdao.getById(id).getId().equals(id)) {
+            else if (!icdao.getById(id).equals(id)) {
                 System.out.println("Error!!");
                 System.out.println("ID tidak ada dalam database");
             } //length name < 2
@@ -98,7 +98,7 @@ public class CountryController implements ICountryController {
                 System.out.println("Error!!");
                 System.out.println("Nama yang dimasukan kurang 3 kata, masukan Nama yang benar");
             } //data sudah ada di tabel
-            else if (icdao.getById(id).equals(id)) {
+            else if (!icdao.getById(id).equals(id)) {
                 System.out.println("Error!!");
                 System.out.println("ID sudah ada dalam database");
             } else {
@@ -130,7 +130,7 @@ public class CountryController implements ICountryController {
                 System.out.println("Error!!");
                 System.out.println("Nama yang dimasukan kurang 3 kata, masukan Nama yang benar");
             } //data tidak ada di tabel
-            else if (icdao.getById(id).getId().equals(id)) {
+            else if (!icdao.getById(id).equals(id)) {
                 System.out.println("Error!!");
                 System.out.println("ID tidak ada dalam database");
             } else {
@@ -153,7 +153,7 @@ public class CountryController implements ICountryController {
                 System.out.println("Error!!");
                 System.out.println("Inputan kosong");
             } //data tidak ada di tabel
-            else if (!icdao.getById(id).getId().equals(id)) {
+            else if (!icdao.getById(id).equals(id)) {
                 System.out.println("Error!!");
                 System.out.println("ID tidak ada dalam database");
             } else {
